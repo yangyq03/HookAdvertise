@@ -27,7 +27,6 @@ public class MainHook implements IXposedHookLoadPackage {
         }
     }
 
-    //百度网盘
     private void hookBaiduDisk() throws Throwable {
         Class<?> aClass = lpparam.classLoader.loadClass("com.baidu.netdisk.ui.advertise.FlashAdvertiseFragment");
         XposedBridge.hookAllMethods(aClass, "onCreateView", new XC_MethodHook() {
@@ -40,7 +39,6 @@ public class MainHook implements IXposedHookLoadPackage {
         });
     }
 
-    //高德地图
     private void hookMiniMap() {
         findAndHookMethod("com.autonavi.minimap.SplashViewManager$b", lpparam.classLoader, "onResult", String.class, new XC_MethodReplacement() {
             @Override
