@@ -3,5 +3,9 @@
     <string-array name="xposed_scope">
         <item>com.baidu.netdisk</item>
         <item>com.autonavi.minimap</item>
+        <item>com.kugou.android</item>
+        <item>ctrip.android.view</item>
+        <item>com.qiyi.video</item>
+        <item>com.tencent.qqmusic</item>
     </string-array>
 </resources>
