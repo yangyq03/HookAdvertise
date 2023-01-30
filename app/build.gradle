@@ -3,15 +3,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        release {
-            enableV3Signing true
-            storeFile file('E:\\Android Studio\\myKey.jks')
-            storePassword '@20030209yyq'
-            keyAlias 'myKey'
-            keyPassword '@20030209yyq'
-        }
-    }
     namespace 'com.apwy.hookadvertise'
     compileSdk 33
 
@@ -27,7 +18,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.getByName("release")
+            signingConfig signingConfigs.getByName("debug")
         }
     }
     compileOptions {
